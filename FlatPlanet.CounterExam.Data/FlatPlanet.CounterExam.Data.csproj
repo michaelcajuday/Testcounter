@@ -45,6 +45,15 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CounterTableRepository.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sql\CounterTable.sql" />
+    <Content Include="Sql\Get.sql" />
+    <Content Include="Sql\Increm.sql" />
+    <Content Include="Sql\Reset.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sql\TestCounter.bak" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
