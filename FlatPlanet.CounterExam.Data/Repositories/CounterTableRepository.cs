@@ -26,7 +26,7 @@ namespace FlatPlanet.CounterExam.Data.Repositories
 
                     // parameters
                     cmd.Parameters.Add(new SqlParameter { ParameterName = "@Message", SqlDbType = SqlDbType.NVarChar, DbType = DbType.String, Size = 1000, Direction = ParameterDirection.InputOutput }).Value = message;
-                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@IsError", SqlDbType = SqlDbType.Bit, Direction = ParameterDirection.InputOutput }).Value = isError;
+                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@IsError", SqlDbType = SqlDbType.Bit, Size Direction = ParameterDirection.InputOutput }).Value = isError;
 
                     con.Open();
 
@@ -56,8 +56,8 @@ namespace FlatPlanet.CounterExam.Data.Repositories
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     // parameters
-                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@Message", SqlDbType = SqlDbType.VarChar, Direction = ParameterDirection.InputOutput }).Value = message;
-                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@IsError", SqlDbType = SqlDbType.Bit, Direction = ParameterDirection.InputOutput }).Value = isError;
+                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@Message", SqlDbType = SqlDbType.NVarChar, DbType = DbType.String, Size = 1000, Direction = ParameterDirection.InputOutput }).Value = message;
+                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@IsError", SqlDbType = SqlDbType.Bit, Size Direction = ParameterDirection.InputOutput }).Value = isError;
 
                     con.Open();
 
@@ -88,8 +88,8 @@ namespace FlatPlanet.CounterExam.Data.Repositories
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     // parameters
-                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@Message", SqlDbType = SqlDbType.VarChar, Direction = ParameterDirection.InputOutput }).Value = message;
-                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@IsError", SqlDbType = SqlDbType.Bit, Direction = ParameterDirection.InputOutput }).Value = isError;
+                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@Message", SqlDbType = SqlDbType.NVarChar, DbType = DbType.String, Size = 1000, Direction = ParameterDirection.InputOutput }).Value = message;
+                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@IsError", SqlDbType = SqlDbType.Bit, Size Direction = ParameterDirection.InputOutput }).Value = isError;
 
                     con.Open();
 
