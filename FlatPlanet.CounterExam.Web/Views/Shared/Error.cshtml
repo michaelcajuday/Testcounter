@@ -1,0 +1,10 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+} 
+<div style="margin:20px 0; ">An error occurred while processing your request.</div>
+<p class="text-danger" style="font-weight:bold;">
+    @Request.QueryString["e"]
+</p>
+<a href="@Url.Action("index", "home")">Back to Home</a>

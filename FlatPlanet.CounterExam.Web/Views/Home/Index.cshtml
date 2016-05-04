@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="padding:20px;">
+
+    @using (Html.BeginForm())
+    {
+        <div style="margin-bottom:20px;">
+            <b>Current Counter :</b> @ViewBag.CurrentCounter
+        </div>
+
+        @Html.Hidden("action","increment") 
+        <input type="button" value="Increment" id="btnincrement" />
+        <input type="button" value="Reset" id="btnreset" />
+
+
+    }
+
+
+</div>
+
+@section customscripts { 
+
+    <script type="text/javascript">
+
+        $('#btnincrement').click(function (ev) {
+
+            $('#action').val("increment");
+            $('form').submit();
+
+        });
+
+        $('#btnreset').click(function (ev) {
+
+            $('#action').val("reset");
+            $('form').submit();
+
+        });
+
+    </script>
+
+}
